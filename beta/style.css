@@ -60,7 +60,7 @@ aside .list ul {
   flex: 80%;
   padding-top: 50px;
   height: 100vh;
-  background-color: lightsalmon;
+  background-color: white;
 }
 
 @media (max-width: 1100px) {
