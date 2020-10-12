@@ -1,0 +1,334 @@
+:root {
+  --d-day-height: 45px;
+  --d-day-margin-bottom: 10px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  font-family: 'Noto Sans KR', Arial, Helvetica, sans-serif;
+  color: #222;
+  box-sizing: border-box;
+}
+
+#wrap {
+  max-width: none;
+  margin: 0 auto;
+  background: white;
+}
+
+#d-day-wrap {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 15px;
+  margin: 0 auto;
+  font-weight: 400;
+  max-width: 1100px;
+}
+
+#d-day-wrap a {
+  text-decoration: none;
+  display: block;
+  color: #222;
+}
+
+.d-day, #countdown {
+  background: #e7e7e7;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3rem;
+  height: 75px;
+  color: #222;
+}
+/*
+.d-day:nth-child(even) {
+  background: #f7f7f7;
+}
+*/
+.birthday:before {
+  content: "🎂";
+  background: #ffc93c;
+  color: white;
+  font-size: 1rem;
+  border-radius: 3px;
+  padding: 5px;
+  line-height: 10px;
+  margin-right: 6px;
+  width: 23px;
+  height: 23px;
+  line-height: 21px;
+}
+
+#countdown-wrap {
+  margin: 0 auto;
+  font-weight: 400;
+  max-width: 1100px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 15px;
+}
+
+#countdown-wrap a {
+  text-decoration: none;
+  display: block;
+  color: #222;
+}
+
+header {
+  height: 80px;
+}
+
+header h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 2.4rem;
+  line-height: 80px;
+  font-weight: 700;
+}
+
+nav {
+  min-height: 50px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 auto;
+  line-height: 50px;
+  display: flex;
+  justify-content: space-between;
+  max-width: 320px;
+}
+
+nav ul li:last-child {
+  margin-right: 0;
+}
+
+nav ul li a {
+  color: #222;
+  text-decoration: none;
+  margin-bottom: 1px;
+}
+
+nav ul li a:hover {
+  border-bottom: 1px solid #222;
+  font-weight: 500;
+}
+
+nav ul li a:focus {
+  all: unset;
+}
+
+footer {
+  height: 100px;
+}
+
+footer a {
+  color: #222;
+  text-decoration: none;
+  margin-bottom: 1px;
+}
+
+footer p {
+  margin-top: 0;
+  display: inline-block;
+  line-height: 100px;
+  font-size: 1.1rem;
+  margin-right: 15px;
+  margin-bottom: 0;
+}
+
+footer p:nth-last-child(1) {
+  margin-right: 0;
+}
+
+footer a:hover {
+  border-bottom: 1px solid #222;
+  font-weight: 500;
+}
+
+footer a:focus {
+  all: unset;
+}
+
+#log {
+  text-align: center;
+  margin-top: 60px;
+  line-height: 1.6;
+}
+
+#log h4 {
+  margin: 0;
+}
+
+#log ul {
+  margin: 0;
+  padding: 0;
+}
+
+#log ul li {
+  font-size: 1.1rem;
+  list-style-type: none;
+}
+
+#log ul li::before {
+  content: "●";
+  font-size: 0.5rem;
+  position: relative;
+  top: -2px;
+  margin-right: 7px;
+}
+
+hr {
+  border-top: 1.5px solid #dadada;
+  max-width: 1100px;
+  margin: 15px auto;
+}
+/*
+.searchModal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+
+.search-modal-content {
+  background-color: #fefefe;
+  margin: 2% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 70%;
+  border-radius: 15px;
+}
+
+.searchModal .btn {
+  margin-bottom: 20px;
+}
+
+.searchModal .btn a {
+  color: #222;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 7px;
+}
+
+.searchModal .btn a:hover {
+  background-color: #e4e4e4;
+}
+
+.searchModal .close {
+  cursor:pointer;
+  background-color:#DDDDDD;
+  text-align: center;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+<div id="modal" class="searchModal">
+      <div class="search-modal-content">
+        <div class="page-header">
+          <h1>안내</h1>
+        </div>
+        <h2>v1.0 베타 버전을 체험할 수 있습니다!</h2>
+        <div class="btn"><a href="beta/index.html">체험하러 가기</a></div>
+        <div class="close" onClick="closeModal();">
+          <span class="pop_bt modalCloseBtn" style="font-size: 13pt;">
+            닫기
+          </span>
+        </div>
+      </div>
+    </div>
+*/
+
+.beta {
+  margin-top: 15px;
+}
+
+.beta a {
+  text-decoration: none;
+  color: #222;
+}
+
+@media (max-width: 1120px) {
+
+  hr {
+    margin: 15px 20px;
+  }
+
+  #d-day-wrap, #countdown-wrap {
+  	width: calc(100vw - 30px);
+    grid-template-columns: repeat(2, 1fr); 
+  }
+ 
+}
+
+@media (max-width: 630px) {
+  #d-day-wrap, #countdown-wrap {
+  	width: calc(100vw - 30px);
+    grid-template-columns: 1fr; 
+  }
+}
+
+@media (max-width: 480px) {
+
+  header h2 {
+    font-size: 1.7rem;
+  }
+
+  .d-day {
+    font-size: 1.2rem;
+  }
+
+  footer {
+    height: auto;
+  }
+
+  footer p {
+    display: block;
+    line-height: 50px;
+    margin-right: 0;
+  }
+
+  footer a {
+    text-align: center;
+  }
+
+  .d-day {
+    overflow:hidden;
+  }
+
+
+  #log {
+    font-size: 1.3rem;
+  }
+
+  #log ul li {
+    padding: 0 20px;
+    font-size: 1.1rem;
+  }
+
+  nav ul {
+    width: 90%;
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 350px) {
+  header h2 {
+    font-size: 1.4rem;
+  }
+}

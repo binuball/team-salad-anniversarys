@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+}
+
+.wrap {
+  background-color: white;
+  width: 100vw;
+}
+
+header {
+  height: 50px;
+  width: 100vw;
+  background-color: lightgreen;
+  position: fixed;
+}
+
+main {
+  display: flex;
+}
+
+aside {
+  margin-top: 50px;
+  flex: 20%;
+  background-color: lightblue;
+  height: calc(100vh - 50px);
+  padding: 15px;
+  overflow-y: scroll;
+}
+
+aside::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+aside::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+aside::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+aside::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+aside .list ul {
+  list-style: none;
+}
+
+.container {
+  flex: 80%;
+  padding-top: 50px;
+  height: 100vh;
+  background-color: lightsalmon;
+}
+
+@media (max-width: 1100px) {
+  
+}

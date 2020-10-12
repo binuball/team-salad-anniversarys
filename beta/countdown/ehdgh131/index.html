@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../count.css">
+  <title>공룡님 카운트</title>
+</head>
+<body>
+  <div class="container">
+    <h2><span>09/11</span>공룡님 생일까지</h2>
+    <div class="countdown">
+      <div id="day">NA</div>
+      <div id="hour">NA</div>
+      <div id="minute">NA</div>
+      <div id="second">NA</div>
+    </div>
+  </div>
+  <div id="d-day">
+    <h3>오늘이 D-Day입니다!</h3>
+  </div>
+  <script type="text/javascript">
+    const daysCountdown = document.querySelector('#day')
+    const hoursCountdown = document.querySelector('#hour')
+    const minutesCountdown = document.querySelector('#minute')
+    const secondsCountdown = document.querySelector('#second')
+    // 00 -> 1월, 01 -> 2월 ... 11 -> 12월
+    const currentTime = new Date()
+    let yearOfTheEvent = currentTime.getFullYear()
+    let eventDate = new Date( yearOfTheEvent, 08, 11 )
+    const isItBirthday = currentTime.getMonth() === 08 && currentTime.getDate() === 11
+  
+  
+    function countdown() {
+      const now = new Date()
+  
+      if ( now > eventDate ) {
+        eventDate = new Date( yearOfTheEvent + 1, 08, 11 )
+      } else if ( now.getFullYear() === eventDate.getFullYear() + 1 ) {
+        eventDate = new Date( now.getFullYear(), 08, 11 )
+      }
+  
+      const currentTime = now.getTime()
+      const eventTime = eventDate.getTime()
+      const remainingTime = eventTime - currentTime
+  
+  
+      let seconds = Math.floor( remainingTime / 1000 )
+      let minutes = Math.floor( seconds / 60 )
+      let hours =  Math.floor( minutes / 60 )
+      let days = Math.floor( hours / 24 )
+  
+      hours %= 24
+      minutes %= 60
+      seconds %= 60
+  
+      if (seconds < 10) {
+        seconds = "0" + seconds;
+      }
+  
+      if (minutes < 10) {
+        minutes = "0" + minutes;
+      }
+  
+      if (hours < 10) {
+        hours = "0" + hours;
+      }
+  
+      if (days < 10) {
+        days = "0" + days;
+      }
+  
+      const Container = document.querySelector('.container');
+      const d_day = document.querySelector('#d-day');
+
+      if (isItBirthday) {
+        Container.style.display = "none"
+        d_day.style.display = "flex"
+        d_day.style.width = "100vw"
+        d_day.style.height = "100vh"
+      } else {
+        daysCountdown.textContent = days
+        hoursCountdown.textContent = hours
+        minutesCountdown.textContent = minutes
+        secondsCountdown.textContent = seconds
+      }
+  
+        setTimeout(countdown, 1000)
+  
+      } // end of if ( isItFebruary4th )
+  
+    countdown()
+    </script>
+</body>
+</html>
