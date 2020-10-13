@@ -26,11 +26,12 @@ main {
 
 aside {
   margin-top: 50px;
-  flex: 20%;
+  flex: 25%;
   background-color: lightblue;
   height: calc(100vh - 50px);
   padding: 15px;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 aside::-webkit-scrollbar {
@@ -57,7 +58,7 @@ aside .list ul {
 }
 
 .container {
-  flex: 80%;
+  flex: 75%;
   padding-top: 50px;
   height: 100vh;
   background-color: white;
