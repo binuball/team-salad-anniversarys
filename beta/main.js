@@ -1,13 +1,13 @@
-function loadIframe(name) {
-  let iframe = document.getElementById('iframe');
+function loadObject(name) {
+  let object = document.getElementById('object');
   let link = `countdown/${name}/index.html`;
-  if (iframe.getAttribute('src') == "") {
-    iframe.setAttribute('src', link);
+  if (object.getAttribute('data') == "") {
+    object.setAttribute('data', link);
     return
-  } else if (iframe.getAttribute('src') !== link) {
-    iframe.setAttribute('src', link);
+  } else if (object.getAttribute('data') !== link) {
+    object.setAttribute('data', link);
   } else {
-    iframe.removeAttribute('src');
-    iframe.setAttribute('src', "");
+    object.removeAttribute('data');
+    object.setAttribute('data', "");
   }
 }
