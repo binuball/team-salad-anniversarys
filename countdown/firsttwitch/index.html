@@ -8,7 +8,7 @@
 </head>
 <body>
   <div class="container">
-    <h2><span>06/23</span>마플님 트위치 첫방송까지</h2>
+    <h2><span>06/15</span>마플님 트위치 첫방송까지</h2>
     <div class="countdown">
       <div id="day">NA</div>
       <div id="hour">NA</div>
@@ -27,17 +27,17 @@
     // 00 -> 1월, 01 -> 2월 ... 11 -> 12월
     const currentTime = new Date()
     let yearOfTheEvent = currentTime.getFullYear()
-    let eventDate = new Date( yearOfTheEvent, 05, 23 )
-    const isItBirthday = currentTime.getMonth() === 05 && currentTime.getDate() === 23
+    let eventDate = new Date( yearOfTheEvent, 05, 15 )
+    const isItBirthday = currentTime.getMonth() === 05 && currentTime.getDate() === 15
   
   
     function countdown() {
       const now = new Date()
   
       if ( now > eventDate ) {
-        eventDate = new Date( yearOfTheEvent + 1, 05, 23 )
+        eventDate = new Date( yearOfTheEvent + 1, 05, 15 )
       } else if ( now.getFullYear() === eventDate.getFullYear() + 1 ) {
-        eventDate = new Date( now.getFullYear(), 05, 23 )
+        eventDate = new Date( now.getFullYear(), 05, 15 )
       }
   
       const currentTime = now.getTime()
