@@ -104,10 +104,10 @@ if (d_day(10, 23) === "Day") {
   var teamsaladfancaferemain = parseInt(d_day(10, 23));
 }
 
-if (d_day(12, 4) === "Day") {
+if (d_day(12, 6) === "Day") {
   var GGUMONGUseongremain = "Day";
 } else {
-  var GGUMONGUseongremain = parseInt(d_day(12, 4));
+  var GGUMONGUseongremain = parseInt(d_day(12, 6));
 }
 
 if (d_day(12, 23) === "Day") {
