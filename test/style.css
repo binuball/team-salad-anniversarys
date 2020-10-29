@@ -1,0 +1,24 @@
+*{margin: 0;padding: 0; box-sizing: border-box;}
+
+body {
+  font-family: 'Noto Sans KR', 'Sans-serif';
+}
+
+.day-wrap {
+  display: grid;
+  gap: 5px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.day {
+  display: flex;
+  align-items: center;
+  background-color: #dbdbdb;
+  justify-content: center;
+  padding: 15px;
+  font-size: 20px;
+}
+
+.day.birthday::before {
+  content: '🎉';
+}
